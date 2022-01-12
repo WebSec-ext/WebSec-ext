@@ -18,7 +18,7 @@ df = df.dropna(how='any',axis=0)
 vectorizer = CountVectorizer( min_df=2, max_df=0.6, max_features=2809, stop_words=stopwords.words('english'))
 #Learn the vocabulary dictionary and return document-term matrix.
 posts = vectorizer.fit_transform(df['Sentence'].values.astype('U')).toarray()
-posts.shape=(5172,53,53,1)
+posts.shape=(5228,53,53,1)
 X=posts
 Y=df['Label']
 #Train Test split...

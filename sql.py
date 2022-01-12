@@ -6,6 +6,7 @@ class sql:
         self.op=0
 
     def resultLogisticRegression(self):
+        predictionLog=0
         inp = [self.url]
         with open('SQLiLogisticRegModel.pkl', 'rb') as file:
             vectorizerLogReg, classifierLogReg = pickle.load(file)
@@ -19,6 +20,7 @@ class sql:
             self.op=self.op+0
 
     def resultDecisionTree(self):
+        predictionDT=0
         inp = [self.url]
         with open('SQLiDTModel.pkl', 'rb') as file:
             vectorizerDT, classifierDT = pickle.load(file)
@@ -32,6 +34,7 @@ class sql:
             self.op=self.op+0
 
     def resultNaiveBayes(self):
+        predictionNB=0
         inp = [self.url]
         with open('SQLiNaiveModel.pkl', 'rb') as file:
             vectorizerNB, classifierNB = pickle.load(file)
@@ -46,7 +49,7 @@ class sql:
     
 
     def result(self):
-        if self.op>1:
+        if self.op>=2:
             return "SQLi"
         else:
             return "Secure"

@@ -51,12 +51,7 @@ def main():
         mainVal=mainVal+5
     if objTest.callPhishing()=="Phishing":
         mainVal=mainVal+10
-    #print(str(mainVal))
-    #print("XSS : "+str(objTest.callXSS())+"SSCode : "+str(objTest.callCodeInj())+"SSSQLi : "+str(objTest.callSQL()))
-    #if objTest.output=="":
-    #    print("Secure")
-    #else:
-    #    print("Vulnerable to "+objTest.output+" attacks")
+
     if mainVal==0:
         print("Secure!")
     elif mainVal==1:

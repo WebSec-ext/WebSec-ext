@@ -6,6 +6,7 @@ class xss:
         self.op=0
 
     def resultSVM(self):
+        predictionSVM=0
         inp = [self.url]
         with open('XSSSVMModel.pkl', 'rb') as file:
             vectorizerSVM, classifierSVM = pickle.load(file)
@@ -22,6 +23,7 @@ class xss:
             self.op=self.op+0
 
     def resultGB(self):
+        predictionGB=0
         inp = [self.url]
         with open('XSSGradBoostModel.pkl', 'rb') as file:
             vectorizerGB, classifierGB = pickle.load(file)
@@ -38,6 +40,7 @@ class xss:
             self.op=self.op+0
 
     def resultLR(self):
+        predictionLR=0
         inp = [self.url]
         with open('XSSLRModel.pkl', 'rb') as file:
             vectorizerLR, classifierLR = pickle.load(file)

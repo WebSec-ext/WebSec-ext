@@ -51,7 +51,7 @@ class phishing:
     
 
     def result(self):
-        if self.op>1:
+        if self.op>=2:
             return "Phishing"
         else:
             return "Secure"

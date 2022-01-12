@@ -24,7 +24,7 @@ posts = vectorizer.fit_transform(df['Sentence'].values.astype('U')).toarray()
 
 #df.shape
 
-posts.shape=(4189,64,64,1)
+posts.shape=(4244,64,64,1)
 
 X=posts
 Y=df['Label']

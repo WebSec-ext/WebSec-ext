@@ -6,6 +6,7 @@ class codeinjection:
         self.op=0
 
     def resultSVM(self):
+        predictionSVM=0
         inp = [self.url]
         with open('CodeInjSVMModel.pkl', 'rb') as file:
             vectorizerSVM, classifierSVM = pickle.load(file)
@@ -19,6 +20,7 @@ class codeinjection:
             self.op=self.op+0
 
     def resultLogisticRegression(self):
+        predictionLR=0
         inp = [self.url]
         with open('CodeInjLRModel.pkl', 'rb') as file:
             vectorizerLR, classifierLR = pickle.load(file)
@@ -32,6 +34,7 @@ class codeinjection:
             self.op=self.op+0
 
     def resultGNB(self):
+        predictionNB=0
         inp = [self.url]
         with open('CodeInjNaiveModel.pkl', 'rb') as file:
             vectorizerNB, classifierNB = pickle.load(file)
@@ -46,7 +49,7 @@ class codeinjection:
     
 
     def result(self):
-        if self.op>1:
+        if self.op>=2:
             return "Code"
         else:
             return "Secure"
